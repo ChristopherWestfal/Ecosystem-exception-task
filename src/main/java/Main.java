@@ -11,5 +11,12 @@ public class Main {
         Student savedStudent = studentService.addNewStudent(newStudent);
 
         System.out.println("Student saved: " + savedStudent);
+
+        try {
+            System.out.println(studentService.findByID("id"));
+        }
+        catch (IDNotFoundException e){
+            System.out.println("Fehler");
+        }
     }
 }
